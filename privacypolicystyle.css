@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora',serif;
+}
+
+.content {
+    margin-top: 100px; /* Ensures content starts below the navbar */
+    position: relative;
+    z-index: 2; /* Ensures it appears above the parallax */
+}
+
+
+.parallax {
+    position: absolute; /* Change from fixed to absolute */
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-image: url('Images/privacyploicybg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0; /* Lower z-index so content is visible */
+}
+
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding: 12px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* Navbar Buttons */
+.navbar a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 2px solid transparent; /* Default transparent border */
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.navbar a:hover {
+    border-color: #6a7f60; /* Sage green border */
+    color: #6a7f60;
+}
+
+/* Background Video */
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures video covers entire screen */
+    z-index: -1; /* Places the video behind all content */
+}
+
+/* Content Wrapper */
+.content {
+    position: relative;
+    z-index: 2; /* Keeps content above the video */
+    margin-top: 100px; /* Pushes content below navbar */
+}
+
+/* Darkened Background for Readability */
+section {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* White Text for Visibility */
+h2, h3, p, b, strong, li {
+    color: white;
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+h2, h3 {
+    font-size: 24px;
+    font-weight: bold;
+}

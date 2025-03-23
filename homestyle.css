@@ -1,0 +1,807 @@
+body
+{
+    margin: 0;
+    font-family: 'Lora', serif;
+}
+
+/* Header Section */
+header 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    backdrop-filter: blur(10px); /* Blurry effect */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo 
+{
+    display: flex;
+    align-items: center;
+}
+
+header .logo img 
+{
+    height: 40px;
+    margin-right: 10px;
+}
+
+header nav 
+{
+    display: flex;
+    gap: 15px;
+}
+
+header nav a 
+{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+header nav a :hover
+{
+    color: #63806f;
+}
+
+
+.icons i 
+{
+    font-size: 24px;
+    cursor: pointer;
+    font-size: 25px; //icon size
+    display: flex;
+    gap: 20px;
+    color: whitesmoke;
+}
+
+.icons :hover 
+{
+    transform:scale(1.2); 
+    color: #63806f; 
+}
+
+/* Hero Section */
+.hero 
+{
+    text-align: center;
+    padding: 60px 20px;
+    background-image: url('Images/dirtbg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+/* Initial state for animation */
+.hero h1, .hero p, .hero .btn 
+{
+    opacity: 0;
+    transform: translateY(20px); /* Adjust the Y-axis position */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Adjust timing for smooth effect */
+}
+
+/* Final state for animation */
+.hero.loaded h1, .hero.loaded p, .hero.loaded .btn 
+{
+    opacity: 1;
+    transform: translateY(0); /* Return to original position */
+}
+
+/* delay for each element */
+.hero h1 
+{
+    transition-delay: 0.2s;
+}
+.hero p 
+{
+    transition-delay: 0.4s;
+}
+.hero .btn 
+{
+    transition-delay: 0.6s;
+}
+
+
+.hero .btn 
+{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #63806f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.hero .btn:hover 
+{
+    background-color: white;
+    color: black;
+}
+
+/* Cards Section */
+.cards 
+{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.card 
+{
+    flex: 1;
+    max-width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img 
+{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card .content 
+{
+    padding: 15px;
+}
+
+.card .content .btn 
+{
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #63806f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.card .content .btn:hover 
+{
+    background-color: black;
+    color: #63806f;
+}
+
+
+.container 
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; 
+  background: rgb(89,178,99);
+  background: linear-gradient(90deg, rgba(89,178,99,1) 5%, rgba(40,70,44,1) 36%, rgba(54,149,84,1) 52%, rgba(145,190,137,1) 97%);
+}
+
+.map-section 
+{
+  flex: 2; 
+  text-align: center;
+}
+
+.map 
+{
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.center-container 
+{
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    justify-content: center; 
+    text-align: center; 
+}
+
+#imgchart 
+{
+    max-width: 100%;
+    height: 500px; 
+    border-radius: 10px;
+}
+
+.resources 
+{
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.resources h2 
+{
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Lora', serif; 
+}
+
+.row 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.resource-card 
+{
+    border: 1px solid #ddd; /* Light border for definition */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center text in cards */
+}
+
+.resource-img 
+{
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+    margin-bottom: 15px; /* Space between image and text */
+}
+
+.resource-card h3 
+{
+    margin-bottom: 15px;
+    color: #007bff; /* Bootstrap primary color */
+}
+
+.resource-card ul 
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+.resource-card li 
+{
+    margin: 10px 0;
+}
+
+.resource-card a 
+{
+    text-decoration: none;
+    color: #333; /* Darker color for links */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.resource-card a:hover 
+{
+    color: #007bff; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Dashboard container */
+#dashboard 
+{
+    position: absolute; /* Position relative to the header */
+    top: 70px; 
+    right: 20px; /* Align */
+    background-color: #e8f5e9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 10px 15px; 
+    z-index: 1000; /* Ensure it appears above other elements */
+    display: none; /* Initially hidden */
+    width: 200px; /* Fixed width for consistent layout */
+}
+
+#dashboard a 
+{
+    display: block; /* Stack links vertically */
+    color: #2e7d32; 
+    text-decoration: none;
+    padding: 8px 10px; 
+    border-radius: 5px; 
+    font-size: 14px; 
+}
+
+#dashboard a:hover 
+{
+    background-color: #c8e6c9; 
+    color: #1b5e20; 
+}
+
+/* Show dashboard when toggled */
+#dashboard.show 
+{
+    display: block; 
+    animation: fadeIn 0.3s ease; 
+}
+
+/* Animation for smooth appearance */
+@keyframes fadeIn 
+{
+    from 
+    {
+        opacity: 0; /* Start with full transparency */
+        transform: translateY(-10px); /* Start slightly above */
+    }
+    to 
+    {
+        opacity: 1; /* End with full visibility */
+        transform: translateY(0); /* Set back to original position */
+    }
+}
+
+
+.dropdown 
+{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(230, 247, 230, 1); 
+  border-radius: 10px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  padding: 10px 0;
+  display: none; 
+}
+
+nav .item 
+{
+  position: relative;
+}
+
+/* Show dropdown on hover */
+nav .item:hover > .dropdown 
+{
+  display: block;
+}
+
+.dropdown a 
+{
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #1b5e20;
+  background: transparent;
+  font-weight: 500;
+}
+
+.dropdown a:hover 
+{
+  background: rgba(200, 230, 201, 1); 
+  border-radius: 5px;
+}
+
+
+.containerr 
+{
+    width: 100%; /* Adjusted width to make the section smaller */
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1000px;
+}
+
+h2 
+{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: floralwhite;
+}
+
+/* Grid Container Styling */
+.grid-container 
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+/* Resource Card Styling */
+.resource-card 
+{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* Default height */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Specific Card Heights and Grid Spans */
+.resource-card:nth-child(1) 
+{
+    grid-column: span 2;
+    height: 200px; /* Increased height */
+}
+
+.resource-card:nth-child(2) 
+{
+    grid-column: span 1;
+    height: 200px; /* Balanced height */
+}
+
+.resource-card:nth-child(3) 
+{
+    grid-column: span 3;
+    height: 250px; /* Reduced height */
+}
+
+/* Overlay Styling */
+.overlay 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black transparent overlay */
+    color: white; /* Default text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.resource-card:hover .overlay 
+{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Image Zoom Effect */
+.resource-card:hover .resource-img 
+{
+    transform: scale(1.1);
+}
+
+.resource-img 
+{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Header Styling within Cards */
+.overlay h3 
+{
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: floralwhite;
+}
+
+/* List Styling */
+ul 
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* List Item Styling */
+li 
+{
+    margin: 10px 0;
+}
+
+/* Link Styling within the Overlay */
+.overlay a 
+{
+    text-decoration: none;
+    color: #63806f; /* Default font color */
+    transition: color 0.3s ease;
+}
+
+.overlay a:hover 
+{
+    color: floralwhite; /* Color on hover */
+}
+
+
+/* Section Styling */
+.report-section 
+{
+    position: relative;
+    width: 100%; /* Full width */
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Background Image Styling */
+.report-background 
+{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0; /* Remove border-radius for full width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Overlay Styling */
+.report-overlay 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Content Styling */
+.report-content 
+{
+    color: white;
+    padding: 20px;
+}
+
+.report-content h3 
+{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.report-content p 
+{
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.report-btn 
+{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #63806f; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.report-btn:hover 
+{
+    background-color: #peachpuff; /* Hover color */
+}
+
+.report-section h3, .report-section p, .report-section .report-btn 
+{
+    opacity: 0;
+    transform: translateY(20px); /* Adjust the Y-axis position */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Adjust timing for smooth effect */
+}
+
+/* Final state for animation */
+.report-section.loaded h3,
+.report-section.loaded p,
+.report-section.loaded .report-btn 
+{
+    opacity: 1;
+    transform: translateY(0); /* Return to original position */
+}
+
+/* Optional: Add a delay for each element */
+.report-section h3 
+{
+    transition-delay: 0.2s;
+}
+.report-section p 
+{
+    transition-delay: 0.4s;
+}
+.report-section .report-btn 
+{
+    transition-delay: 0.6s;
+}
+
+
+
+/* Footer Styling */
+.custom-footer 
+{
+    text-align: center;
+    padding: 20px;
+    background-color: #63806f; /* Background color */
+    color: #f8f9fa; /* Text color */
+    border-top: 1px solid #ddd;
+    position: relative; /* Keep footer in document flow */
+    overflow: hidden;
+    transform: translateY(100%); /* Start with footer hidden below the viewport */
+    transition: transform 0.6s ease-out; /* Transition effect */
+}
+
+/* When footer is in view */
+.custom-footer.show-footer 
+{
+    transform: translateY(0); /* Slide footer into view */
+}
+
+/* Footer Content Styling */
+.footer-content 
+{
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer Link Styling */
+.footer-link 
+{
+    color: #c8e6c9; /* Pale green color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover 
+{
+    color: #a5d6a7; /* Hover color */
+}
+
+
+/* Parallax Background Styling */
+.map 
+{
+    background: url('Images/mosquito.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.resources 
+{
+    background: url('Images/mosquito.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+/* Additional Styling for Overlay */
+.map::before, .resources::before 
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional: To add a dark overlay */
+    z-index: -1; /* Ensure the overlay is behind the content */
+}
+
+/* Ensuring Proper Layout and Spacing */
+.container 
+{
+    position: relative;
+    z-index: 2;
+    padding: 40px 20px;
+}
+
+
+/* map */
+.pulsating-marker 
+{
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 255, 0, 0.6); /* Green color */
+    border-radius: 50%;
+    position: relative;
+}
+
+.pulsating-marker::before 
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 255, 0, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse 
+{
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+}
+
+        .noti-container 
+        {
+            position: relative;
+            display: inline-block;
+        }
+        .noti-dropdown 
+        {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: rgba(230, 247, 230, 1); /* Light green */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            padding: 10px 0;
+            min-width: 350px;  
+            max-width: 350px;  
+            max-height: 300px; /* Limit height */
+            overflow-y: hidden;
+            overflow-x: hidden; /* Prevent horizontal scrollbar */
+            transform: none !important; 
+        }
+        
+        .noti-dropdown ul li 
+        {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #1b5e20; /* Green text */
+            background: transparent;
+            font-weight: 500;
+            border-bottom: 1px solid #ddd;
+            right: 10px;
+            z-index: 1000;
+        }
+        .noti-dropdown ul li:last-child 
+        {
+            border-bottom: none;
+        }
+        
+
+        .noti-dropdown ul 
+        {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            white-space: normal;  /* Ensure text wraps */
+            word-wrap: break-word; /* Prevent overflow */
+            overflow-x: hidden; /* Hide horizontal scroll */
+        }
+
+
+        .noti-dropdown ul li:hover 
+        {
+          background: rgba(200, 230, 201, 1); 
+          border-radius: 5px;
+          transform: none !important;
+          padding: 10px 20px; /* Maintain size */
+          margin: 0; /* Prevent margin increase */
+        }
+
+
+        .noti-badge 
+        {
+            background: red;
+            color: white;
+            padding: 2px 6px;
+            font-size: 12px;
+            border-radius: 50%;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }

@@ -1,0 +1,139 @@
+body
+{
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container 
+{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.section 
+{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.section h2 
+{
+    background-color: #1b4332;
+    color: #fff;
+    margin: 0;
+    padding: 15px;
+    font-size: 22px;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.section p, .section ul 
+{
+    padding: 15px;
+    line-height: 1.8;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.section ul 
+{
+    list-style-type: disc;
+    margin-left: 30px;
+}
+
+.section img 
+{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.section a:hover
+{
+    color: forestgreen;
+}
+
+footer 
+{
+    background-color: #1b4332;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+footer p 
+{
+    margin: 0;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) 
+{
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Navbar Styling */
+.navbar 
+{
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.navbar a 
+{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.navbar a:hover 
+{
+    border-color: #6a7f60;
+    color: #6a7f60;
+}
+
+
+#background-video 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures it covers the full background */
+    z-index: -1; /* Keeps it behind all elements */
+}
+
+.main-cont, header, footer, .container 
+{
+    position: relative; /* Ensures content appears above the video */
+    z-index: 1;
+}

@@ -1,0 +1,214 @@
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lora', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f8f9;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  width: 80%;
+  max-width: 900px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Left Section Styling */
+.left-section {
+  flex: 1;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c2c2c;
+  margin: 0;
+}
+
+/* Right Section Styling */
+.right-section {
+  flex: 1;
+  padding: 40px;
+  background-color: #f7f8f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.next-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #607d68;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.next-button:hover {
+  background-color: #4e6654;
+}
+
+/* Divider with 'OR' */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.or {
+  color: #2c2c2c;
+  font-size: 14px;
+}
+
+/* Login Button */
+.register-button {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #607d68;
+  color: #607d68;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background-color: #607d68;
+  color: white;
+}
+
+/* Terms and Conditions */
+.terms {
+  font-size: 12px;
+  color: #2c2c2c;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.terms a {
+  color: #607d68;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+/* Styled Combo Box */
+select[name="cmbusertype"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #2c2c2c;
+  appearance: none; /* no default arrow styling */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23999' d='M2 0L0 2h4z'/%3e%3c/svg%3e"); 
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 15px;
+}
+
+select[name="cmbusertype"]:focus {
+  border-color: #607d68;
+  outline: none;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #2c2c2c;
+  appearance: none; /* Removes default arrow styling */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23999' d='M2 0L0 2h4z'/%3e%3c/svg%3e"); 
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 15px;;
+}
+
+select:focus {
+  border-color: #5cb85c; /* Matches the green theme */
+  outline: none;
+  box-shadow: 0 0 5px rgba(92, 184, 92, 0.5);
+}
+
+select option {
+  font-size: 16px;
+  padding: 5px;
+}
+
+.back-button {
+  background: #607d68;
+  color: white;
+  padding: 5px 10px; /* Adjusted padding */
+  font-size: 10px; /* Adjusted font size */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background: #4e6654;
+}

@@ -1,0 +1,116 @@
+body 
+{
+    font-family: Lora, serif;
+    background-color: #e8f5e9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar 
+{
+    width: 250px;
+    background-color: #a1cca5;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar h2 
+{
+    text-align: center;
+}
+
+.sidebar ul 
+{
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li 
+{
+    margin: 20px 0;
+}
+
+.sidebar ul li a 
+{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    background: #415d43;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.sidebar ul li a:hover 
+{
+    background: #66bb6a;
+}
+
+/* User Details Card */
+.main-content 
+{
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+}
+
+.user-card 
+{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+.user-card h2 
+{
+    color: #2e7d32;
+}
+
+.user-card p 
+{
+    font-size: 16px;
+    color: #333;
+}
+
+/* Buttons */
+.button-container 
+{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button 
+{
+    padding: 10px 20px;
+    background: #2e7d32;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover 
+{
+    background: #66bb6a;
+}
+
+@media screen and (max-width: 768px) 
+{
+    .container 
+    {
+      width: 100%; /* Full width on small screens */
+    }
+  }

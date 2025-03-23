@@ -1,0 +1,244 @@
+
+body 
+{
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f2f5;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container 
+{
+    display: flex;
+    width: 100%;
+}
+
+.cards 
+{
+    display: flex;
+    gap: 20px; 
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    margin-bottom: 20px;
+}
+
+.card 
+{
+    background: #e8f5e9; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Each card will take equal space */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover 
+{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 
+{
+    font-size: 18px;
+    color: #344e41; 
+    margin-bottom: 10px;
+}
+
+.card p 
+{
+    font-size: 24px;
+    font-weight: bold;
+    color: #344e41; 
+    margin: 0;
+}
+
+.card button 
+{
+    background: #344e41; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card button:hover 
+{
+    background: #004d40; 
+}
+
+@media (max-width: 768px) 
+{
+    .cards 
+    {
+        flex-wrap: wrap; 
+    }
+
+    .card 
+    {
+        flex: 1 1 100%; 
+    }
+
+    .container 
+    {
+      flex-direction: column;
+      width: 100%; 
+    }
+
+    .sidebar 
+    {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content 
+    {
+        padding: 10px;
+    }
+}
+
+.sidebar 
+{
+    width: 300px;
+    background: #344e41;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile ul 
+{
+    list-style: none;
+    padding: 0;
+}
+
+.profile li 
+{
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.profile li:hover 
+{
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.features button 
+{
+    font-family: 'Lora', serif;
+    width: 100%;
+    background: #63806f;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background 0.3s ease;
+}
+
+.features button:hover 
+{
+    background: #4a7c3b;
+}
+
+.main-content 
+{
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.header 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.notifications 
+{
+    position: relative;
+    cursor: pointer;
+}
+
+.notification-count 
+{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.case-history table 
+{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.case-history th, .case-history td 
+{
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.case-history th 
+{
+    background: #588157;
+    color: white;
+}
+
+.case-history .view-case-btn, .case-history .verify-case-btn 
+{
+    background: #6a994e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 2px;
+    transition: background 0.3s ease;
+}
+
+.case-history .view-case-btn:hover, .case-history .verify-case-btn:hover 
+{
+    background: #4a7c3b;
+}
+
+#goBackBtn 
+{
+    background: #d9534f; 
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background 0.3s ease;
+}
+
+#goBackBtn:hover 
+{
+    background: #c9302c; 
+}

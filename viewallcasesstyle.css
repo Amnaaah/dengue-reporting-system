@@ -1,0 +1,182 @@
+/* General Styles */
+body 
+{
+    font-family: Lora, serif;
+    background-color: #e8f5e9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar 
+{
+    background-color: #415d43; 
+    padding: 15px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar a 
+{
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #8fb996; 
+    border-radius: 6px;
+    margin: 0 10px; /* Spacing between buttons */
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover 
+{
+    background: #6a994e;
+    border-color: #bfd8b7; 
+    transform: translateY(-2px); 
+}
+
+
+/* Main Content */
+.main-content 
+{
+    margin-top: 70px;
+    padding: 20px;
+}
+
+/* Case History Table */
+.case-history table 
+{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td 
+{
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th 
+{
+    background: #588157;
+    color: white;
+}
+
+.case-history table 
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.case-history tr 
+{
+    transition: background-color 0.3s ease;
+}
+
+.case-history tr.selected 
+{
+    background-color: #99c2a2; 
+}
+
+
+/* Buttons */
+.view-user-details-btn, 
+.verify-case-btn,
+.add-comments-btn,
+.resolve-case-btn 
+{
+    background: #6a994e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 2px;
+    transition: background 0.3s ease;
+}
+
+.view-user-details-btn:hover, 
+.verify-case-btn:hover 
+{
+    background: #4a7c3b;
+}
+
+/* Popup Card */
+.popup-card 
+{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #bfd8bd;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Overlay */
+.overlay 
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: floralwhite;
+    z-index: 999;
+}
+
+/* Pending OK Button */
+.pendingOkbtn button 
+{
+    background: #344e41;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+
+
+.officer-selection-card 
+{
+    display: none; 
+    border: 1px solid #ccc; 
+    padding: 20px; 
+    border-radius: 5px; 
+    max-width: 95%; 
+    width: 350px; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: white; 
+    z-index: 1000; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+.table 
+{
+    width: 100%; /* Ensure table takes full width of the card */
+    margin-bottom: 0; /* Remove bottom margin */
+}
